@@ -1,0 +1,15 @@
+.container {
+  margin: -0.27rem 0.36rem 0;
+}
+
+.suggestItem {
+  padding: 0.33rem 0;
+  font-size: 0.3rem;
+  color: #36404a;
+  letter-spacing: 0;
+}
+
+.suggestItem::after {
+  color: #ebebeb;
+  border-bottom: solid 1px #ebebeb;
+}

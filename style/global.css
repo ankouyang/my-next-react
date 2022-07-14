@@ -1,0 +1,220 @@
+html {
+  /*
+   *这里为什么是13.334vw
+   *375px对应 = 100vw(视口的100% )  
+   *1px=0.267vw  是为了方便计算跟设置为100px  所以font-size:26.67vw 
+   *因为这是750放大的设计稿,真实的需要缩小2倍 
+   *所以就为13.334vw 
+  */
+  font-size: 13.334vw; 
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+}
+
+body {
+  font-size: 0.4rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+ul,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* clears the 'X' from Internet Explorer */
+input[type='search']::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+input[type='search']::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* clears the 'X' from Chrome */
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration {
+  display: none;
+}
+
+button {
+  padding: 0;
+  margin: 0;
+  background-color: inherit;
+  border: none;
+  outline: none;
+}
+
+:root {
+  --main-bg-color: red;
+}
+
+.border-b-1px,
+.border-t-1px,
+.border-all-1px {
+  position: relative;
+}
+
+/* 四周1px */
+.border-all-1px::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  content: '';
+  border: solid 1px #e6e6e6;
+}
+
+.border-b-1px::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  color: #e6e6e6;
+  content: ' ';
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.border-l-1px::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  height: 100%;
+  color: #e6e6e6;
+  content: ' ';
+  border-left: 1px solid #e6e6e6;
+}
+
+.border-t-1px::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  color: #e6e6e6;
+  content: ' ';
+  border-top: 1px solid #e6e6e6;
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (min-resolution: 2dppx) {
+  .border-b-1px::after {
+    transform: scaleY(0.5);
+  }
+
+  .border-t-1px::before {
+    transform: scaleY(0.5);
+  }
+
+  .border-all-1px {
+    border: none !important;
+  }
+
+  .border-all-1px::before {
+    width: 200%;
+    height: 200%;
+    transform: scale(0.5);
+
+    /* position: absolute;
+    box-sizing: border-box;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    border: solid 1px #e6e6e6; */
+    transform-origin: left top;
+  }
+}
+
+@media (min-resolution: 3dppx) {
+  .border-b-1px::after {
+    transform: scaleY(0.34);
+  }
+
+  .border-t-1px::before {
+    transform: scaleY(0.34);
+  }
+}
+
+.home-banners .banner-dots {
+  position: absolute;
+  top: 3.06rem;
+  right: 0.3rem;
+  line-height: 0.01rem;
+}
+
+.home-banners .banner-dots li {
+  display: inline-block;
+  width: 0.14rem;
+  height: 0.18rem;
+  margin: 0.05rem;
+  background: url('../public/img/dot_grey.png');
+  background-size: 100%;
+}
+
+.home-banners .banner-dots .slick-active {
+  background: url('../public/img/dot.jpg');
+  background-size: 100%;
+}
+
+.home-banners .banner-dots li button {
+  display: none;
+}
+
+.nav-banners .nav-dots{
+  text-align: center;
+  width: 100%;
+  margin-top: 0.18rem;
+}
+.nav-banners .nav-dots li {
+    display: inline-block;
+    height: 0.14rem;
+    width: 0.14rem;
+    border-radius: 0.14rem;
+    background-color: rgba(224,224,224,0.6);
+    border: 0.01rem solid rgba(224,224,224,0.6);
+    margin: 0 0.2rem 0 0;
+}
+
+.nav-banners .nav-dots .slick-active {
+  background: rgba(196,192,192,1);
+  border: 0.01rem solid rgba(196,192,192,1)
+}
+
+.nav-banners .nav-dots li button {
+  display: none;
+}

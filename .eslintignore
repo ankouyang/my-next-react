@@ -1,0 +1,10 @@
+node_modules
+.next
+yarn-err.log
+public
+.babelrc.js
+.eslintrc.js
+next.config.js
+jsconfig.json
+scf_bootstrap
+jsconfig.jscon

@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    // baseUrl配置选项用于解析非相对模块名称,允许直接从项目的根目录导入.
+    "baseUrl": ".",
+    // path可以配置模块别名,指定要相对于baseUrl选项计算的路径映射。
+    "paths": {
+      "@/*": ["components/*"]
+    }
+  },
+  "exclude": ["node_modules", ".next"]
+}
